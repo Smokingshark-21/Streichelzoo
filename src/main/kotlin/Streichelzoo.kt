@@ -1,5 +1,5 @@
 class Streichelzoo() {
-    var tierliste= listOf<Tier>(
+    var tierliste= mutableListOf<Tier>(
         Schaf("Manuel",30.0,3,"männlich",false),
         Schaf("John",50.0,6,"männlich",true),
         Huhn("Sabine",5.0,4,"weiblich"),
@@ -42,5 +42,49 @@ class Streichelzoo() {
         }
     }
 
-    fun verwalten(){}
+    fun verwalten(){
+
+        do {
+
+            try {
+
+                println("Wähle ein tier aus bei dem eine Aktion ausgeführt werden soll")
+
+                for (i in tierliste.indices){
+                    println("[$i] ${tierliste[i].name}")
+                }
+                println("[7] Programm beenden")
+                var inputTier = readln().toInt()
+
+                when(inputTier){
+                    0 -> {tierliste[0].aktionAuswaehlen()}
+                    1 -> {tierliste[1].aktionAuswaehlen()}
+                    2 -> {tierliste[2].aktionAuswaehlen()}
+                    3 -> {tierliste[3].aktionAuswaehlen()}
+                    4 -> {tierliste[4].aktionAuswaehlen()}
+                    5 -> {tierliste[5].aktionAuswaehlen()}
+                    6 -> {tierliste[6].aktionAuswaehlen()}
+                    7 -> {
+                        println("Sind sie sicher das sie das Programm verlassen wollen\n Ja/Nein")
+                        var input = readln().lowercase()
+                        if (input == "ja"){
+                            println("Das Program wurde beendet")
+                            break
+                        }else if (input == "nein"){
+                            continue
+                        }
+                    }
+                }
+
+            }catch (e:Exception){
+
+                println("\nDeine eingabe war nicht richtig probiere es nochmal\n")
+                Thread.sleep(2000)
+                continue
+
+            }
+
+        }while (true)
+
+    }
 }

@@ -21,4 +21,34 @@ class Kuh (
             println("Die Kuh[$name] kann noch keine Milch geben da sie noch nicht 3 jahre alt ist")
         }
     }
+
+    override fun aktionAuswaehlen() {
+        do {
+            try {
+
+                println("welche aktion soll die Kuh ausführen\n" +
+                        "Geräuchemachen,Melken,Streicheln,Füttern")
+
+                var input = readln().lowercase()
+
+                when(input){
+                    "geräuchemachen" -> {geraeuscheMachen()}
+                    "melken" -> {melken(besucherErstellen())}
+                    "streicheln" -> streicheln(besucherErstellen())
+                    "füttern" -> {fuettern(besucherErstellen())}
+                    else -> { continue}
+                }
+                Thread.sleep(2000)
+                break
+
+
+            }catch (e:Exception) {
+
+                println("\nDeine eingabe war nicht richtig probiere es nochmal\n")
+                Thread.sleep(2000)
+                continue
+            }
+
+        }while (true)
+    }
 }

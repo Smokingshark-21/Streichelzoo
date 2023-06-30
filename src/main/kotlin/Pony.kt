@@ -30,4 +30,35 @@ class Pony(
             println("Das Pony $name ist unter einem Jahr und darf deswegen noch nicht geritten werden")
         }
     }
+
+    override fun aktionAuswaehlen() {
+
+        do {
+            try {
+
+                println("welche aktion soll das Pony ausführen\n" +
+                        "Geräuchemachen,Reiten,Streicheln,Füttern")
+
+                var input = readln().lowercase()
+
+                when(input){
+                    "geräuchemachen" -> {geraeuscheMachen()}
+                    "reiten" -> {reiten(besucherErstellen())}
+                    "streicheln" -> streicheln(besucherErstellen())
+                    "füttern" -> {fuettern(besucherErstellen())}
+                    else -> { continue}
+                }
+                Thread.sleep(2000)
+                break
+
+
+            }catch (e:Exception) {
+
+                println("\nDeine eingabe war nicht richtig probiere es nochmal\n")
+                Thread.sleep(2000)
+                continue
+            }
+
+        }while (true)
+    }
 }

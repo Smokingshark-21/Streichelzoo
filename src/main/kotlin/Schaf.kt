@@ -17,5 +17,36 @@ class Schaf(
     }
 
     override fun aktionAuswaehlen() {
+
+        do {
+          try {
+
+              println("welche aktion soll das schaf ausführen\n" +
+                      "Geräuchemachen,Baden,Streicheln,Füttern")
+
+              var input = readln().lowercase()
+
+              when(input){
+                  "geräuchemachen" -> {geraeuscheMachen()}
+                  "baden" -> {baden()}
+                  "streicheln" -> streicheln(besucherErstellen())
+                  "füttern" -> {fuettern(besucherErstellen())}
+                  else -> { continue}
+              }
+              Thread.sleep(2000)
+              break
+
+
+          }catch (e:Exception) {
+
+              println("\nDeine eingabe war nicht richtig probiere es nochmal\n")
+              Thread.sleep(2000)
+              continue
+          }
+
+      }while (true)
+
+
+
     }
 }

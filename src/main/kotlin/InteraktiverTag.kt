@@ -5,19 +5,19 @@ fun tierErstellen():Tier{
            println(
            "Was für ein Tier möchten sie erstellen\n" +
                    "Schaf,Huhn,Kuh,Pony,")
-           var firstinput = readln().lowercase()
+           val firstinput = readln().lowercase()
 
            println("Was für einen namen hat das Tier?")
-           var name = readln()
+           val name = readln()
 
            println("Wie viel wiegt das Tier?")
-           var weight = readln().toDouble()
+           val weight = readln().toDouble()
 
            println("Wie Alt ist das Tier?")
-           var age = readln().toInt()
+           val age = readln().toInt()
 
            println("Was für ein Geschlecht hat das Schaf Männlich oder Weiblich")
-           var gender = readln().lowercase()
+           val gender = readln().lowercase()
 
 
 
@@ -25,7 +25,7 @@ fun tierErstellen():Tier{
 
                "pony" ->{
                    println("Wie Schnell ist das Pony?")
-                   var speed = readln().toDouble()
+                   val speed = readln().toDouble()
                    return Pony(name,weight,age,gender,speed)
                }
                "kuh" -> {return Kuh(name,weight,age,gender)}
@@ -34,7 +34,7 @@ fun tierErstellen():Tier{
 
                "schaf" -> {
                    println("Ist die Wolle von dem Schaf sauber ja=true nein=false")
-                       var clean = readln().toBoolean()
+                       val clean = readln().toBoolean()
 
                    return Schaf(name,weight,age,gender,clean)
                }
@@ -57,10 +57,10 @@ fun besucherErstellen():Besucher{
         try {
 
             println("Wie heißt du")
-            var name = readln()
+            val name = readln()
 
             println("Wie alt bist du?")
-            var age = readln().toInt()
+            val age = readln().toInt()
 
             return Besucher(age,name)
 
@@ -72,10 +72,9 @@ fun besucherErstellen():Besucher{
 }
 fun main(){
     var tierliste = mutableListOf<Tier>()
+    val streichelzoo = Streichelzoo()
 
     repeat(4){
-        tierliste.add(tierErstellen())
+        streichelzoo.tierliste.add(tierErstellen())
     }
-
-
 }
