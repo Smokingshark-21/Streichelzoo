@@ -1,4 +1,4 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/kXPr6jBX)
+
 <h1 align="center">Grundlagen der Programmierung</h1>
 <h3 align="center">Objektorientierte Programmierung</h3>
 
@@ -296,59 +296,6 @@ Jetzt wird es Zeit, die aktionAuswählen-Methode in unseren Tieren zu füllen. I
 Nun sollst du die verwalten-Methode vom Streichelzoo schreiben. Diese soll alle Tiere im Zoo auflisten. Aus dieser Auswahl soll man ein Tier wählen und dann die aktionAuswahl-Methode nutzen können. Das soll solange wiederholt werden, bis der Nutzer das Program beenden will.
 
 Zuletzt sollst du nun in der main-Funktion die verwalten-Methode auf deiner Instanz von Streichelzoo ausführen.
-</details>
-
----
-
-<details>
-<summary><b>Coding Interview Fragen</b></summary>
-
-Beantworte folgende Fragen. Erstelle dafür eine Datei `Antworten.txt` und schreibe deine Antworten hier rein.  
-> Die Fragen könnten so in einem Bewerbungsverfahren abgefragt werden. Nimm dir daher etwas Zeit und beantworte die Fragen selbstständig. Gerne kannst du dich hierfür nochmal in den Vorlesungsfolien oder in eigener Recherche informieren.
-
-1. **Was ist eine Klasse und wozu braucht man Klassen?**
-2. **Erkläre anhand eines Beispiels wie Vererbung funktioniert**
-3. **Was ist der Unterschied zwischen Wert- und Referenztypen?**
-4. **Kann ich in folgenden Fällen Werte hinzufügen/entfernen oder verändern? Warum?**
-    1. `var zahlen = mutableListOf(1,2,3)`
-    2. `var zahlen = listOf(1,2,3)`
-    3. `val zahlen = mutableListOf(1,2,3)`
-    4. `val zahlen = listOf(1,2,3)`
-
-</details>
-
----
-
-
-<details>
-<summary><b>Bonusaufgabe</b></summary>
-
-Unser heutiges Projekt sollte euch als Inspiration dienen, selbstständig weiteren Code zum Üben zu programmieren.
-
-Statt weiteren Bonusaufgaben gibt es also Vorschläge für weitere Features, die ihr freiwillig noch im Projekt einbauen könnt.
-
-Sie sind offen geschrieben, es gibt also viele Lösungsmöglichkeiten. Versuche sie so gut wie möglich umzusetzen.
-
-1. **Futterbeutel**
-
-- Um Tiere zu füttern, brauchen wir natürlich Futter. Erstelle einen Futterbeutel. Der Beutel enthält Futter, angegeben in Gramm. Jeder Besucher hat einen Futterbeutel. Der Besucher kann jetzt das Futter zum Füttern verwenden. Dabei steigt das Gewicht des Tieres, je nachdem wie viel Futter verfüttert wurde. Das verfütterte Futter verschwindet natürlich aus dem Futterbeutel.
-
-- Der Besucher kann den Futterbeutel an einer Kasse wieder auffüllen. Dafür muss der Besucher Geld bezahlen. Erweitere die Besucher-Klasse, sodass ein Besucher nun auch Geld mit sich trägt. Das Startgeld kann zu Beginn zufällig zugewiesen werden.
-
-1. **Fütterung**
-
-- Jedes Tier mag anderes Futter. Erstelle verschiedene Sorten an Futter. Bei der Kasse kann der Besucher sie zu unterschiedlichen Preisen kaufen und im Futterbeutel aufbewahrt werden.
-
-- Die Kasse hat auch ein Infoblatt. In dem Infoblatt steht, welches Tier welches Futter mag. Die Tiere sind jetzt auch wählerisch und fressen kein Futter, das sie nicht mögen.
-
-1. **Patenschaft**
-
-- An der Kasse gibt es die Möglichkeit, eine Patenschaft mit einem Tier einzugehen.
-
-Im Infoblatt ist aufgelistet, welches Tier wie viel kostet.
-
-Zusätzlich wird an der Kasse aufgelistet, welches Tier welche Besucher als Paten hat.
-
 </details>
 
 ---
